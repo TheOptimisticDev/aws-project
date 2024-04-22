@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <title>Product</title>
+        <link rel="stylesheet" href="../style.css" />
+        <style>
+            * {
+                line-height: 25px;
+                font-family: sans-serif;
+            }
+            #productContainer {
+                width: 85%;
+                margin: auto;
+            }
+            #productContainer > h1 {
+                margin-top: 20px;
+                font-size: 24px;
+                font-weight: 600;
+                text-align: left;
+                margin-left: 0;
+            }
+            #singleLineFilter {
+                width: 100%;
+                padding: 10px 20px;
+                display: flex;
+                align-items: center;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                border: 1px solid #e9e9e9;
+                border-radius: 5px;
+                background: #fff;
+                margin: 20px 0;
+                font-weight: 600;
+                color: #1c1c28;
+            }
+            #priceTitle {
+                margin-right: 50px;
+                font-weight: 600;
+            }
+            #singleLineFilter span {
+                margin: 0 20px 0 5px;
+                font-weight: 500;
+            }
+            #singleLineFilter input {
+                height: 16px;
+                width: 16px;
+                cursor: pointer;
+                opacity: 1;
+            }
+            #productFlexBox {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 30px;
+                line-height: 21px;
+                padding: 20px 0 50px 0;
+            }
+            #productFlexBox > .card {
+                width: 23%;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid rgb(239, 236, 236);
+            }
+            #disclaimer {
+                width: 90%;
+                margin: 20px auto;
+                text-align: justify;
+                font-size: 12px;
+                line-height: 21px;
+                color: #212121;
+            }
+            #disclaimer span {
+                font-weight: bold;
+            }
+            #productContainer button {
+                padding: 7px 10px;
+                background-color: white;
+                cursor: pointer;
+                color: #5e5e69;
+                border: 1px solid #aeaeb5;
+                border-radius: 2px;
+            }
+            #productContainer #loadBtn {
+                display: flex;
+                justify-content: center;
+            }
+            #filterBtn {
+                padding: 10px 20px;
+                font-size: 18px;
+                font-weight: bold;
+                border-radius: 4px;
+                margin-left: auto;
+                color: rgb(0, 154, 174) !important;
+            }
+            #filterBtn:hover {
+                color: rgb(0, 216, 244) !important;
+                border: 1px solid rgb(239, 230, 230);
+            }
+
+            .product img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+
+            .product h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .product a {
+                text-decoration: none;
+                color: #333; 
+            }
+
+            .product a:hover {
+                color: #007bff;
+            }
+
+            .product .description {
+                margin-bottom: 20px;
+            }
+
+            .product .price {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .product .features {
+                margin-bottom: 20px;
+            }
+
+            .product .features h3 {
+                margin-bottom: 10px;
+            }
+
+            .product .features ul {
+                list-style-type: disc;
+                margin-left: 20px;
+            }
+
+        .product .ratings {
+            margin-bottom: 20px;
+        }
+
+        .product .availability {
+            margin-bottom: 20px;
+        }
+
+        .product button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #0056b3;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <div id="logo_container">
+                    <a href="../index.html"
+                        ><img src="../images/Capture1.PNG" width="230px" alt="logo"
+                    /></a>
+                </div>
+                <div id="search_bar">
+                    <img
+                        src="../images//searchIcon.png"
+                        width="25px"
+                        alt="searchIcon"
+                    />
+                    <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        placeholder="Search Products..."
+                    />
+                </div>
+                <div id="login_container">
+                    <button onclick="showLogin()">Login</button>
+                </div>
+                <div id="cart_container">
+                    <a href="cart.html"
+                        ><img
+                            src="../images/cart.png"
+                            width="35px"
+                            alt="cart-icon"
+                    /></a>
+                    <span id="cart_count" style="line-height: 16px">0</span>
+                </div>
+            </header>
+            <hr />
+            <section id="productContainer">
+                <div class="container">
+                    <div class="product"><br><br>
+                      <h1>12-in-1 Multitool Knife</h1><br><br>
+                      <img src="https://m.media-amazon.com/images/I/710PviiNSiL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Amazfit Smart Watch" />
+                      <div class="description">
+                        <p>
+                            The 12-in-1 Multi-tool Knife is a versatile and essential tool for outdoor enthusiasts and everyday adventurers. 
+                            This compact and sturdy tool combines twelve essential functions in one convenient package. 
+                            It features a sharp blade for cutting tasks, a saw for tackling wood and branches, and a screwdriver for various repairs.
+                        </p>
+                      </div>
+                      <div class="price">
+                        <p>R 159.00</p>
+                      </div>
+                      <div class="features">
+                        <h3>Product Features:</h3>
+                        <ul>
+                            <li>Precision blade for cutting tasks</li>
+                            <li>Saw for cutting wood and branches</li>
+                            <li>Screwdriver for various repairs</li>
+                            <li>Bottle and can opener for convenience</li>
+                            <li>Scissors for precise cutting</li>
+                            <li>Corkscrew for opening bottles of wine</li>
+                            <li>Nail file for grooming needs</li>
+                            <li>Fish scaler for outdoor enthusiasts</li>
+                            <li>Hook remover for fishing enthusiasts</li>
+                            <li>Tweezers for removing splinters</li>
+                            <li>Key ring for easy portability</li>
+                            <li>Compact and lightweight design for convenience</li>
+                          </ul>
+                      </div>
+                      <div class="ratings">
+                        <h3>Customer Ratings and Reviews:</h3>
+                        <div class="stars">★★☆☆☆</div>
+                        <p>2.5 stars based on 1000 reviews</p>
+                        <div class="like-buttons">
+                            <button><i class="far fa-thumbs-up"></i> Like</button>
+                            <button><i class="far fa-thumbs-down"></i> Unlike</button>
+                        </div>
+                        <p><a href="#">Read reviews</a></p>
+                        </div>
+                      <div class="availability">
+                        <h3>Product Availability:</h3>
+                        <p>In stock</p>
+                      </div>
+                      <button style=" background-color: #007bff; color: #fff;">Add to Cart</button>
+                    </div>
+                  </div>
+            </section>
+            
+            <div id="disclaimer">
+                <span>Disclaimer:</span> Information and statements regarding the products/services offered on SellSphere marketplace have not been evaluated by any regulatory authority and are not intended to diagnose, 
+                treat, cure, or prevent any condition. Reviews of products/services are contributed by users based on their individual experiences and opinions, and do not necessarily represent the views of SellSphere. 
+                The information provided by sellers on SellSphere may not be comprehensive; customers are advised to carefully review product labels for complete information provided by manufacturers. 
+                Results from using products may vary from person to person, and no specific outcome should be considered typical.
+            </div>
+            <hr />
+            <footer>
+                <div class="enter-email" style="padding: 0 20px">
+                    <span>Sign-up for email updates:</span>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter Email Address"
+                    />
+                    <button style="width: 150px; height: 50px; background-color: #007bff; color: #fff;">Sign-Up</button>
+                </div>
+                        <div>
+                            <div id="footer-body">
+                                <div id="footer-details">
+                                    <ul>
+                                        <h4>About Us</h4>
+                                        <li>SellSphere Group</li>
+                                        <li>Contact Us</li>
+                                        <li>Careers</li>
+                                        <li>Corporate Social Responsibility</li>
+                                        <li>Diversity, Inclusion & Belonging</li>
+                                        <li>Blog</li>
+                                    </ul>
+                                    <ul>
+                                        <h4>Customer Service</h4>
+                                        <li>Order Status</li>
+                                        <li>Shipping</li>
+                                        <li>Return Policy & Exchanges</li>
+                                        <li>Price Adjustments</li>
+                                        <li>Gift Cards</li>
+                                    </ul>
+                                    <ul>
+                                        <h4>Stores & Services</h4>
+                                        <li>Find a Store</li>
+                                        <li>Pop-In Shop</li>
+                                        <li>Virtual Events</li>
+                                        <li>Investor Relations</li>
+                                        <li> Media Network</li>
+                                        <li>Pay My Account</li>
+                                    </ul>
+                                </div>
+                                <div id="footer-links">
+                                    <h3>Follow Us</h3>
+                                    <div id="footer-social">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/2111/2111398.png" alt="Facebook">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="Twitter">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/174/174857.png" alt="LinkedIn">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" alt="YouTube">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/2111/2111644.png" alt="Telegram">
+        
+                                    </div>
+                                </div>
+                                <div id="top" onclick="scrollFunction1()">
+                                    <img src="../images/top.png" alt="" />
+                                    <p>Top</p>
+                                </div>
+                            </div>
+                            <div id="footer-policy">
+                                <ul>
+                                    <li>Privacy</li>
+                                    <li>Terms & Conditions</li>
+                                    <li>©2024 SellSphere | YoungDevs AWS re/Start</li>
+                                </ul>
+                            </div>
+                        </div>
+            </footer>
+            <div class="wrapper-container">
+                <div class="wrapper">
+                    <img
+                        src="https://static1.hkrtcdn.com/hknext/static/media/common/login/close.svg"
+                        alt=""
+                        onclick="hideLogin()"
+                    />
+                    <div class="title-text">
+                        <div class="title login">Login Form</div>
+                        <div class="title signup">Signup Form</div>
+                    </div>
+                    <div class="form-container">
+                        <div class="slide-controls">
+                            <input
+                                type="radio"
+                                name="slide"
+                                id="login"
+                                checked
+                            />
+                            <input type="radio" name="slide" id="signup" />
+                            <label for="login" class="slide login">Login</label>
+                            <label for="signup" class="slide signup"
+                                >Signup</label
+                            >
+                            <div class="slider-tab"></div>
+                        </div>
+                        <div class="form-inner">
+                            <form action="#" class="login">
+                                <div class="field">
+                                    <input
+                                        type="text"
+                                        placeholder="Email Address"
+                                        required
+                                    />
+                                </div>
+                                <div class="field">
+                                    <input
+                                        type="password"
+                                        placeholder="Password"
+                                        required
+                                    />
+                                </div>
+                                <div class="pass-link">
+                                    <a href="#">Forgot password?</a>
+                                </div>
+                                <button
+                                    class="field btn"
+                                    id="loginBtn"
+                                    onclick="loginUser()"
+                                >
+                                    Submit
+                                </button>
+                                <div class="signup-link">
+                                    Not a member? <a href="">Signup now</a>
+                                </div>
+                            </form>
+                            <form action="#" class="signup">
+                                <div class="field">
+                                    <input
+                                        type="text"
+                                        placeholder="Name"
+                                        required
+                                    />
+                                </div>
+                                <div class="field">
+                                    <input
+                                        type="text"
+                                        placeholder="Email Address"
+                                        required
+                                    />
+                                </div>
+                                <div class="field">
+                                    <input
+                                        type="password"
+                                        placeholder="password"
+                                        required
+                                    />
+                                </div>
+                                <button
+                                    class="field btn"
+                                    id="signupBtn"
+                                    onclick="signupUser()"
+                                >
+                                    Submit
+                                </button>
+                                <p
+                                    id="signUpMsg"
+                                    style="
+                                        margin: 10px 0px;
+                                        color: red;
+                                        font-size: 12px;
+                                        text-align: center;
+                                    "
+                                ></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="../header.js"></script>
+<script>
+    let count = 8;
+    async function sortLowToHigh(e) {
+        if (e.checked) {
+            let productFlexBox = document.querySelector("#productFlexBox");
+            let arr = [];
+            await fetch(
+                `http://localhost:8080/products/getLowToHigh/${count}`,
+                {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            )
+                .then((response) => response.json())
+                .then((data) => (arr = data));
+            productFlexBox.innerHTML = "";
+            arr.forEach((element) => {
+                element.name = element.name.substring(0, 60);
+                productFlexBox.innerHTML =
+                    productFlexBox.innerHTML + createCard(element);
+            });
+        } else {
+            let productFlexBox = document.querySelector("#productFlexBox");
+            let arr = [];
+            await fetch(`http://localhost:8080/products/get/${count}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+                .then((response) => response.json())
+                .then((data) => (arr = data));
+            productFlexBox.innerHTML = "";
+            arr.forEach((element) => {
+                element.name = element.name.substring(0, 60);
+                productFlexBox.innerHTML =
+                    productFlexBox.innerHTML + createCard(element);
+            });
+        }
+    }
+    async function sortHighToLow(e) {
+        if (e.checked) {
+            let productFlexBox = document.querySelector("#productFlexBox");
+            let arr = [];
+            await fetch(
+                `http://localhost:8080/products/getHighToLow/${count}`,
+                {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                }
+            )
+                .then((response) => response.json())
+                .then((data) => (arr = data));
+            productFlexBox.innerHTML = "";
+            arr.forEach((element) => {
+                element.name = element.name.substring(0, 60);
+                productFlexBox.innerHTML =
+                    productFlexBox.innerHTML + createCard(element);
+            });
+        } else {
+            let productFlexBox = document.querySelector("#productFlexBox");
+            let arr = [];
+            await fetch(`http://localhost:8080/products/get/${count}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+                .then((response) => response.json())
+                .then((data) => (arr = data));
+            productFlexBox.innerHTML = "";
+            arr.forEach((element) => {
+                element.name = element.name.substring(0, 60);
+                productFlexBox.innerHTML =
+                    productFlexBox.innerHTML + createCard(element);
+            });
+        }
+    }
+
+    function createCard(obj) {
+        return `
+    <div class="card">
+        <div class="cardImgContainer">
+            <img src="${obj.image}" alt="" />
+        </div>
+        <div class="cardInfoContainer">
+            <div class="ratingContainer">
+                <span class="rating">${obj.rating} <img src="../images/rating.png" alt="" /> </span>
+                <span class="cardReviews">${obj.reviews} reviews</span>
+            </div>
+            <p class="title">${obj.name}</p>
+            <div class="priceContainer">
+                <span>₹${obj.discountedPrice}</span>
+                <span>₹${obj.price}</span>
+                <span>${obj.discount}% off</span>
+            </div>
+            <div class="premiumContainer">
+                <img src="../images/star.png" width="18px" alt="" />
+                    <span>₹${obj.premiumPrice}</span>
+                <span>for Premium Member</span>
+            </div>
+            <div class="addToCartBtnContainer" data-id="${obj._id}" onClick="addToCart(this)">
+                <span>Add To Cart</span>
+            </div>
+        </div>
+    </div>
+    `;
+    }
+    showProducts(count);
+    async function showProducts(count) {
+        let productFlexBox = document.querySelector("#productFlexBox");
+        let arr = [];
+        await fetch(`http://localhost:8080/products/get/${count}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => (arr = data));
+        productFlexBox.innerHTML = "";
+        arr.forEach((element) => {
+            element.name = element.name.substring(0, 60);
+            productFlexBox.innerHTML =
+                productFlexBox.innerHTML + createCard(element);
+        });
+    }
+    function loadMore() {
+        count = count + 8;
+        showProducts(count);
+    }
+</script>
