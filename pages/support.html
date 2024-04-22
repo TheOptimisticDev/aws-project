@@ -75,6 +75,30 @@
                 border: 1px solid #aeaeb5;
                 border-radius: 2px;
             }
+            .contact-form {
+            margin-top: 30px;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+            .form-group label {
+                display: block;
+                font-weight: bold;
+            }
+            .form-group input[type="text"],
+            .form-group input[type="email"],
+            .form-group textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #cccccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+            .form-group textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
         </style>
     </head>
     <body>
@@ -204,9 +228,31 @@
                     <div class="faq-answer">Yes, you can sell both new and used items on Sellsphere. However, please ensure that used items are in good condition and accurately described in your listings.</div>
                 </div>
                 <div class="faq">
+                    <br><br><h1>Contact Us</h1>
+                    <div class="contact-form">
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" style="width: 150px; height: 50px; background-color: #007bff; color: #fff;">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="faq">
                     <br><br><br>
                     <img src="https://png.pngtree.com/png-vector/20190217/ourlarge/pngtree-1-year-warranty-vector-template-design-illustration-png-image_555282.jpg" alt="Warranty Information Image" style="width: 10%; display: block; margin: 0 auto; max-width: 100%;">
-                    <p>At Sellsphere, we understand the importance of peace of mind when making a purchase. That's why many of our products come with warranty options to safeguard your investment and ensure your satisfaction.</p><br>
+                    <p>** At Sellsphere, we understand the importance of peace of mind when making a purchase. That's why many of our products come with warranty options to safeguard your investment and ensure your satisfaction.</p><br>
                 </div>
             </section>
             

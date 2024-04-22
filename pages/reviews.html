@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SellSphere</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    </head>
+    <style>
+        #reviews {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .review {
+            border-bottom: 1px solid #777676;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .rating {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .content {
+            margin-bottom: 10px;
+        }
+        .author {
+            font-style: italic; 
+        }
+        .view-more {
+            text-align: center;
+            margin-top: 20px; /* Adjust margin-top as needed */
+        }
+
+        .view-more button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .view-more button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <body>
+        <div id="container">
+            <header>
+                <div id="logo_container">
+                    <a href="../index.html"
+                        ><img src="../images/Capture1.PNG" width="230px" alt="logo"
+                    /></a>
+                </div>
+                <div id="search_bar">
+                    <img
+                        src="../images//searchIcon.png"
+                        width="25px"
+                        alt="searchIcon"
+                    />
+                    <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        placeholder="Search Products..."
+                    />
+                </div>
+                <div id="login_container">
+                    <button onclick="showLogin()">Login</button>
+                </div>
+                <div id="cart_container">
+                    <a href="../pages/cart.html"
+                        ><img
+                            src="../images/cart.png"
+                            width="35px"
+                            alt="cart-icon"
+                    /></a>
+                    <span id="cart_count">0</span>
+                </div>
+            </header>
+            <hr />
+            <nav>
+                <div class="burger-menu">
+                    <div id="shopByCategory_container">
+                      <img src="../images/menu.png" alt="three-line" width="25px" />
+                      <span>Menu</span>
+                    </div>
+                    <div class="dropdown-content">
+                      <a href="../index.html">Home</a>
+                      <a href="../pages/about.html">About Us</a>
+                      <a href="#">Services</a>
+                      <a href="../pages/product.html">Products</a>
+                      <a href="../pages/product.html">Gallery</a>
+                      <a href="#">Testimonials</a>
+                      <a href="../pages/support.html">FAQ</a>
+                      <a href="../pages/blog.html">Blog</a>
+                      <a href="#">Careers</a>
+                    </div>
+                  </div>
+                
+                <div id="brands_container">
+                    <img src="../images/brand.png" alt="offer-icon" />
+                    <a href="../pages/about.html" style="color: black; text-decoration: none;">About Us</a>
+                </div>
+                <div id="bestSeller_container">
+                    <img src="../images/tag.jpg" alt="offer-icon" style="width: 20px; height: 20px;" />
+                    <a href="../pages/bestseller.html" style="color: black; text-decoration: none;">Best Seller</a>
+                </div>
+                <div id="deals_container">
+                    <img src="../images/deals.png" alt="offer-icon" />
+                    <a href="../pages/promotions.html" style="color: black; text-decoration: none;">Promotions</a>
+                </div>
+                <div id="blogs_container">
+                    <img src="../images/blogs.png" alt="offer-icon" />
+                    <a href="../pages/blog.html" style="color: black; text-decoration: none;">Blog</a>
+                </div>
+                <div id="customerSupport_container">
+                    <img src="../images/customer.png" alt="offer-icon" />
+                    <a href="../pages/support.html" style="color: black; text-decoration: none;">Customer Support</a>
+                </div>
+                <div id="storeLocation_container">
+                    <img src="../images/location.png" alt="offer-icon" />
+                    <a href="../pages/storelocator.html" style="color: black; text-decoration: none;">Store Locator</a>
+                </div>
+            </nav>
+            <hr />
+            <section class="productContainer">
+                <section id="reviews"><br>
+                    <h1 style="font-size: 40px;">Customer Reviews</h1>
+                    <br><br>
+                    <section id="reviews">
+                        <div class="review">
+                            <div class="content">
+                                <p>This marketplace is amazing! I found everything I needed easily and the checkout process was smooth.</p>
+                            </div>
+                            <div class="rating">★★★★★</div>
+                            <div class="author">- John Doe</div><br>
+                            <div class="reply">
+                                <p><strong>SellSphere Team:</strong> Thank you for your positive feedback, John! We're glad to hear you had a great experience.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="review">
+                            <div class="content">
+                                <p>While the product selection is good, the website layout could be improved. It's a bit confusing to navigate.</p>
+                            </div>
+                            <div class="rating">★★☆☆☆</div>
+                            <div class="author">- Jane Smith</div><br>
+                            <div class="reply">
+                                <p><strong>SellSphere Team:</strong> Thank you for your feedback, Jane! We'll work on improving the website navigation for a better experience.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="review">
+                            <div class="content">
+                                <p>I love shopping on SellSphere! The prices are great and the delivery is always fast.</p>
+                            </div>
+                            <div class="rating">★★★★★</div>
+                            <div class="author">- Michael Johnson</div><br>
+                            <div class="reply">
+                                <p><strong>SellSphere Team:</strong> Thank you for your kind words, Michael! We're thrilled to hear you're enjoying your shopping experience with us.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="review">
+                            <div class="content">
+                                <p>The product I received was different from what was advertised. Disappointed with the discrepancy.</p>
+                            </div>
+                            <div class="rating">★★★☆☆</div>
+                            <div class="author">- Emily Davis</div><br>
+                            <div class="reply">
+                                <p><strong>SellSphere Team:</strong> We apologize for the inconvenience, Emily. Please reach out to our customer support team, and we'll make it right for you.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="review">
+                            <div class="content">
+                                <p>The website could use more filtering options to narrow down search results. Otherwise, it's a good experience.</p>
+                            </div>
+                            <div class="rating">★★★☆☆</div>
+                            <div class="author">- Alex Patel</div><br>
+                            <div class="reply">
+                                <p><strong>SellSphere Team:</strong> Thank you for your feedback, Alex! We'll look into adding more filtering options to enhance the user experience.</p>
+                            </div>
+                        </div>
+                        <div class="view-more">
+                            <button>Load More Reviews</button>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <hr style="margin-top: -17px" />
+            <footer>
+                <div class="enter-email" style="padding: 0 20px">
+                    <span>Sign-up for email updates:</span>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter Email Address"
+                    />
+                    <button style="width: 150px; height: 45px; background-color: #007bff; color: #fff;">Sign-Up</button>
+                </div>
+                        <div>
+                            <div id="footer-body">
+                                <div id="footer-details">
+                                    <ul>
+                                        <h4>About Us</h4>
+                                        <li>Contact Us</li>
+                                        <li>Careers</li>
+                                        <li>Blog</li>
+                                        <li>Corporate Social Responsibility</li>
+                                        <li>Diversity, Inclusion & Belonging</li>
+                                    </ul>
+                                    <ul>
+                                        <h4>Customer Service</h4>
+                                        <li>Order Status</li>
+                                        <li>Shipping</li>
+                                        <li>Return Policy & Exchanges</li>
+                                        <li>Price Adjustments</li>
+                                        <li>Gift Cards</li>
+                                    </ul>
+                                    <ul>
+                                        <h4>Stores & Services</h4>
+                                        <li>Find a Store</li>
+                                        <li>Pop-In Shop</li>
+                                        <li>Virtual Events</li>
+                                        <li>Investor Relations</li>
+                                        <li> Media Network</li>
+                                        <li>Pay My Account</li>
+                                    </ul>
+                                </div>
+                                <div id="footer-links">
+                                    <h3>Follow Us</h3>
+                                    <div id="footer-social">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/2111/2111398.png" alt="Facebook">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="Twitter">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/174/174857.png" alt="LinkedIn">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" alt="YouTube">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/2111/2111644.png" alt="Telegram">
+        
+                                    </div>
+                                </div>
+                                <div id="top" onclick="scrollFunction1()">
+                                    <img src="../images/top.png" alt="" />
+                                    <p>Top</p>
+                                </div>
+                            </div>
+                            <div id="footer-policy">
+                                <ul>
+                                    <li>Privacy</li>
+                                    <li>Terms & Conditions</li>
+                                    <li>©2024 SellSphere | YoungDevs AWS re/Start</li>
+                                </ul>
+                            </div>
+                        </div>
+            </footer>
+            <div class="wrapper-container">
+                <div class="wrapper">
+                    <img
+                        src="https://static1.hkrtcdn.com/hknext/static/media/common/login/close.svg"
+                        alt=""
+                        onclick="hideLogin()"
+                    />
+                    <div class="title-text">
+                        <div class="title login">Login</div>
+                        <div class="title signup">Sign-Up</div>
+                    </div>
+                    <div class="form-container">
+                        <div class="slide-controls">
+                            <input
+                                type="radio"
+                                name="slide"
+                                id="login"
+                                checked
+                            />
+                            <input type="radio" name="slide" id="signup" />
+                            <label for="login" class="slide login">Login</label>
+                            <label for="signup" class="slide signup"
+                                >Sign-Up</label
+                            >
+                            <div class="slider-tab"></div>
+                        </div>
+                        <div class="form-inner">
+                            <form action="#" class="login">
+                                <div class="field">
+                                    <input
+                                        type="text"
+                                        placeholder="Email Address"
+                                        required
+                                    />
+                                </div>
+                                <div class="field">
+                                    <input
+                                        type="password"
+                                        placeholder="Password"
+                                        required
+                                    />
+                                </div>
+                                <div class="pass-link">
+                                    <a href="#">Forgot password?</a>
+                                </div>
+                                <button
+                                    class="field btn"
+                                    id="loginBtn"
+                                    onclick="loginUser()"
+                                >
+                                    Submit
+                                </button>
+                                <div class="signup-link">
+                                    Not a member? <a href="">Sign-Up</a>
+                                </div>
+                            </form>
+                            <form action="#" class="signup">
+                                <div class="field">
+                                    <input
+                                        type="text"
+                                        placeholder="Name"
+                                        required
+                                    />
+                                </div>
+                                <div class="field">
+                                    <input
+                                        type="text"
+                                        placeholder="Email Address"
+                                        required
+                                    />
+                                </div>
+                                <div class="field">
+                                    <input
+                                        type="password"
+                                        placeholder="password"
+                                        required
+                                    />
+                                </div>
+                                <button
+                                    class="field btn"
+                                    id="signupBtn"
+                                    onclick="signupUser()"
+                                >
+                                    Submit
+                                </button>
+                                <p
+                                    id="signUpMsg"
+                                    style="
+                                        margin: 10px 0px;
+                                        color: red;
+                                        font-size: 12px;
+                                        text-align: center;
+                                    "
+                                ></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="./header.js"></script>
+<script src="./script.js"></script>
