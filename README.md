@@ -31,10 +31,10 @@ Sellsphere is a fictional marketplace designed for educational purposes. It is a
 
 ## Screenshot
 
-- Web Browser
+- **Web Browser**
 ![Sellsphere Marketplace](./images/screenshot.PNG)
 
-- AWS Console
+- **AWS Console**
 ![Sellsphere Marketplace](./images/screenshot2.PNG)
 
 ## Purpose
