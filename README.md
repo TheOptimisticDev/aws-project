@@ -23,15 +23,15 @@ Sellsphere is a fictional marketplace designed for educational purposes. It is a
 
 ## AWS re/Start Group IV Members
 
-**Mfumu Wealth Mabunda**
-**Sisipho Mburwana**
-**Palesa Mdakane**
-**Pester Mbhetse**
-**Zamaswazi Dlamini**
+- **Mfumu Wealth Mabunda**
+- **Sisipho Mburwana**
+- **Palesa Mdakane**
+- **Pester Mbhetse**
+- **Zamaswazi Dlamini**
 
 ## Screenshot
 
-![Sellsphere Marketplace](path/to/screenshot.png)
+![Sellsphere Marketplace](./images/screenshot.PNG)
 
 ## Purpose
 
