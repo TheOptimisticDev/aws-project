@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <title>Product</title>
         <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
         <style>
             * {
                 line-height: 25px;
@@ -146,26 +147,35 @@
                 margin-left: 20px;
             }
 
-        .product .ratings {
-            margin-bottom: 20px;
-        }
+            .product .ratings {
+                margin-bottom: 20px;
+            }
 
-        .product .availability {
-            margin-bottom: 20px;
-        }
+            .product .availability {
+                margin-bottom: 20px;
+            }
 
-        .product button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+            .product button {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
 
-        .product button:hover {
-            background-color: #0056b3;
-        }
+            .product button:hover {
+                background-color: #0056b3;
+            }
+            .magnify-image {
+                width: 300px;
+                height: 300px;
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .magnify-image:hover {
+                transform: scale(1.2);
+            }
         </style>
     </head>
     <body>
@@ -203,11 +213,59 @@
                 </div>
             </header>
             <hr />
+            <nav>
+                <div class="burger-menu">
+                    <div id="shopByCategory_container">
+                      <img src="../images/menu.png" alt="three-line" width="25px" />
+                      <span>Menu</span>
+                    </div>
+                    <div class="dropdown-content">
+                      <a href="../index.html">Home</a>
+                      <a href="../pages/about.html">About Us</a>
+                      <a href="#">Services</a>
+                      <a href="../pages/product.html">Products</a>
+                      <a href="../pages/product.html">Gallery</a>
+                      <a href="#">Testimonials</a>
+                      <a href="../pages/support.html">FAQ</a>
+                      <a href="../pages/blog.html">Blog</a>
+                      <a href="#">Careers</a>
+                    </div>
+                  </div>
+                
+                <div id="brands_container">
+                    <img src="../images/brand.png" alt="offer-icon" />
+                    <a href="../pages/about.html" style="color: black; text-decoration: none;">About Us</a>
+                </div>
+                <div id="bestSeller_container">
+                    <img src="../images/tag.jpg" alt="offer-icon" style="width: 20px; height: 20px;" />
+                    <a href="../pages/bestseller.html" style="color: black; text-decoration: none;">Best Seller</a>
+                </div>
+                <div id="deals_container">
+                    <img src="../images/deals.png" alt="offer-icon" />
+                    <a href="../pages/promotions.html" style="color: black; text-decoration: none;">Promotions</a>
+                </div>
+                <div id="blogs_container">
+                    <img src="../images/blogs.png" alt="offer-icon" />
+                    <a href="../pages/blog.html" style="color: black; text-decoration: none;">Blog</a>
+                </div>
+                <div id="customerSupport_container">
+                    <img src="../images/customer.png" alt="offer-icon" />
+                    <a href="../pages/support.html" style="color: black; text-decoration: none;">Customer Support</a>
+                </div>
+                <div id="storeLocation_container">
+                    <img src="../images/location.png" alt="offer-icon" />
+                    <a href="../pages/storelocator.html" style="color: black; text-decoration: none;">Store Locator</a>
+                </div>
+            </nav>
+            <hr />
+            
             <section id="productContainer">
+                
                 <div class="container">
-                    <div class="product"><br><br>
+                    <div class="product"><br>
+                        <a href="../index.html" style="text-decoration: none; color: #007bff; display: block; margin-top: 20px;">Back to Home Page</a><br>
                       <h1>Amazfit Smart Watch</h1><br><br>
-                      <img src="https://m.media-amazon.com/images/I/61kM0KwlgiL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Amazfit Smart Watch" />
+                      <img class="magnify-image" src="https://m.media-amazon.com/images/I/61kM0KwlgiL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Amazfit Smart Watch" />
                       <div class="description">
                         <p>The Amazfit Smart Watch is a stylish and functional wearable device that combines fitness tracking with smart features. It tracks your steps, heart rate, and sleep patterns, while also providing notifications for calls, messages, and app alerts.</p>
                       </div>
