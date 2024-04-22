@@ -1,6 +1,6 @@
 # Sellsphere Marketplace
 
-Sellsphere is a fictional marketplace designed for educational purposes. It is a static web application hosted on Amazon Cloud Services (AWS), providing a simulated environment for learning about e-commerce platforms and cloud hosting.
+Sellsphere is a fictional marketplace designed for educational purposes. It is a static web application hosted on Amazon Cloud Services (AWS S3), providing a simulated environment for learning about e-commerce platforms and cloud hosting.
 
 ## Features
 
@@ -31,6 +31,10 @@ Sellsphere is a fictional marketplace designed for educational purposes. It is a
 
 ## Screenshot
 
+- Web Browser
+![Sellsphere Marketplace](./images/screenshot.PNG)
+
+- AWS Console
 ![Sellsphere Marketplace](./images/screenshot.PNG)
 
 ## Purpose
