@@ -310,7 +310,7 @@ hr{
     cursor: pointer;
 }
 .list-item:hover{
-    border: 1px solid rgb(0,181,183);
+    border: 1px solid #007bff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 30px;
     border-radius: 10px;
 }
@@ -369,7 +369,7 @@ footer{
     width: 20%;
     color: rgb(255, 255, 255);
     border: none;
-    background-color: rgb(0,181,183);
+    background-color: #007bff;
     cursor: pointer;
 }
 #footer-body {
@@ -397,7 +397,7 @@ footer{
   cursor: pointer;
 }
 #footer-details ul li:hover{
-  color: rgb(0, 214, 179);
+  color: #007bff;
 }
 #footer-details ul h4 {
   font-weight: 700;
@@ -453,7 +453,7 @@ footer{
     font-family: "Poppins", sans-serif;
 }
 ::selection {
-    background: rgb(51,196,197);
+    background: #007bff;
     color: #fff;
 }
 .wrapper-container{
@@ -523,10 +523,10 @@ footer{
     border-radius: 15px;
     background: -webkit-linear-gradient(
         left,
-        rgb(62, 243, 243),
-        rgb(56, 216, 216),
-        rgb(52, 194, 194),
-        rgb(43, 187, 187)
+        #007bff,
+        #0f74df,
+        #176eca,
+        #007bff
     );
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -580,15 +580,14 @@ input[type="radio"] {
     transition: all 0.3s ease;
 }
 .form-inner form .field input:focus {
-    border-color: rgb(51,196,197);
-    /* box-shadow: inset 0 0 3px #fb6aae; */
+    border-color: #007bff;
 }
 .form-inner form .field input::placeholder {
     color: #999;
     transition: all 0.3s ease;
 }
 form .field input:focus::placeholder {
-    color: rgb(51,196,197);
+    color: #007bff;
 }
 .form-inner form .pass-link {
     margin-top: 5px;
@@ -599,7 +598,7 @@ form .field input:focus::placeholder {
 }
 .form-inner form .pass-link a,
 .form-inner form .signup-link a {
-    color: rgb(51,196,197);
+    color: #007bff;
     text-decoration: none;
 }
 .form-inner form .pass-link a:hover,
@@ -620,10 +619,10 @@ form .btn .btn-layer {
     left: -100%;
     background: -webkit-linear-gradient(
         right,
-        rgb(62, 243, 243),
-        rgb(56, 216, 216),
-        rgb(52, 194, 194),
-        rgb(43, 187, 187)
+        #1374dd,
+        #186bc4,
+        #146ece,
+        #007bff
     );
     border-radius: 15px;
     transition: all 0.4s ease;
@@ -645,13 +644,34 @@ form .btn input[type="submit"]{
 #signupBtn , #loginBtn{
     background: -webkit-linear-gradient(
         right,
-        rgb(62, 243, 243),
-        rgb(56, 216, 216),
-        rgb(52, 194, 194),
-        rgb(43, 187, 187)
+        #2f6daf,
+        #2168b3,
+        #0e70d7,
+        #007bff
     );
     color: white;
     border: none;
     font-size: 20px;
     cursor: pointer;
+}
+
+/* Media query for screens smaller than 768px (e.g., smartphones) */
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Media query for screens between 768px and 992px (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Media query for screens larger than 1200px (e.g., desktops) */
+@media (min-width: 1200px) {
+    .container {
+        width: 60%;
+    }
 }
